@@ -1,34 +1,3 @@
-# from text_cleaner import clean_text
-# from skill_vocabulary import SKILL_VOCAB
-# import PyPDF2
-
-# def extract_skills_from_text(text):
-#     """Extract skills from a text string using SKILL_VOCAB"""
-#     tokens = clean_text(text.lower())
-#     return [skill for skill in SKILL_VOCAB if skill.lower() in tokens]
-
-# def extract_resume_skills(file):
-#     """Read uploaded resume and extract skills"""
-#     file_ext = file.name.split('.')[-1]
-
-#     text = ""
-#     if file_ext == "pdf":
-#         reader = PyPDF2.PdfReader(file)
-#         for page in reader.pages:
-#             text += page.extract_text() + " "
-#     elif file_ext == "docx":
-#         doc = docx.Document(file)
-#         for para in doc.paragraphs:
-#             text += para.text + " "
-#     elif file_ext == "txt":
-#         text = str(file.read(), 'utf-8')
-#     else:
-#         raise ValueError("Unsupported file type")
-
-#     skills = extract_skills_from_text(text)
-#     return skills
-
-
 import pdfplumber
 from skill_vocabulary import SKILL_VOCAB
 

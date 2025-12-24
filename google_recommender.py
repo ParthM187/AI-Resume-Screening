@@ -1,8 +1,8 @@
 import requests
 
 # Replace these with your own Google API Key and Custom Search Engine ID
-API_KEY = "AIzaSyAUsaalFRF6opiYQXgrmIyVtRaQ8Z5K7tQ"
-CX = "a2ef6f2a7cdcf4b60"
+API_KEY = "Google API key"
+CX = "Google Custom Search Engine ID"
 
 def get_google_recommendations(missing_skills):
     """
@@ -20,10 +20,10 @@ def get_google_recommendations(missing_skills):
 
         url = "https://www.googleapis.com/customsearch/v1"
         params = {
-            "key": "AIzaSyAUsaalFRF6opiYQXgrmIyVtRaQ8Z5K7tQ",   # Ensure key is a string
-            "cx": "a2ef6f2a7cdcf4b60",         # Ensure CX is a string
+            "key": "Google API key",   # Ensure key is a string
+            "cx": "Google Custom Search Engine ID",         # Ensure CX is a string
             "q": query,
-            "num": 3          # Top 3 results per skill
+            "num": 3     
         }
 
         try:
