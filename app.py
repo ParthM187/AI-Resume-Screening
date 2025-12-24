@@ -7,12 +7,12 @@ from skill_matcher import match_skills
 from google_recommender import get_google_recommendations
 import spacy
 
-# Load spaCy model safely
 try:
     nlp = spacy.load("en_core_web_sm")
-except:
-    import subprocess
-    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+except OSError:
+    # If model not found, download it
+    from spacy.cli import download
+    download("en_core_web_sm")
     nlp = spacy.load("en_core_web_sm")
 
 # ---------------- PAGE CONFIG ----------------
