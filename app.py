@@ -1,5 +1,7 @@
 import streamlit as st
 import plotly.express as px
+from dotenv import load_dotenv
+load_dotenv()
 
 from resume_skill_extractor import extract_resume_skills
 from jd_skill_extractor import extract_jd_skills_from_text
