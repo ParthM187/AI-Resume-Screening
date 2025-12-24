@@ -28,7 +28,7 @@ Google Custom Search API
 
 PDFPlumber
 
-# How to Run#
+# How to Run #
 
 pip install -r requirements.txt
 streamlit run app.py
