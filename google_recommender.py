@@ -1,8 +1,11 @@
 import requests
+from dotenv import load_dotenv
 
-# Replace these with your own Google API Key and Custom Search Engine ID
-API_KEY = "Google API key"
-CX = "Google Custom Search Engine ID"
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
+CX = os.getenv("CX")
+
 
 def get_google_recommendations(missing_skills):
     """
@@ -20,8 +23,8 @@ def get_google_recommendations(missing_skills):
 
         url = "https://www.googleapis.com/customsearch/v1"
         params = {
-            "key": "Google API key",   # Ensure key is a string
-            "cx": "Google Custom Search Engine ID",         # Ensure CX is a string
+            "key": API_KEY,   # Ensure key is a string
+            "cx": CX,         # Ensure CX is a string
             "q": query,
             "num": 3     
         }
