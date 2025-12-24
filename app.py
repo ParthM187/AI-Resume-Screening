@@ -5,6 +5,15 @@ from resume_skill_extractor import extract_resume_skills
 from jd_skill_extractor import extract_jd_skills_from_text
 from skill_matcher import match_skills
 from google_recommender import get_google_recommendations
+import spacy
+
+# Load spaCy model safely
+try:
+    nlp = spacy.load("en_core_web_sm")
+except:
+    import subprocess
+    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+    nlp = spacy.load("en_core_web_sm")
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
